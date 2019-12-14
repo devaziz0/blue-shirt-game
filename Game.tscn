@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://tilesets/grid_lines/grid_lines_tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://tilesets/grid/grid_tileset.tres" type="TileSet" id=2]
@@ -9,10 +9,14 @@
 [ext_resource path="res://icons/tree2.png" type="Texture" id=7]
 [ext_resource path="res://icons/i44.png" type="Texture" id=8]
 [ext_resource path="res://RightButton.gd" type="Script" id=9]
-[ext_resource path="res://icons/i33.png" type="Texture" id=10]
-[ext_resource path="res://LeftButton.gd" type="Script" id=11]
-[ext_resource path="res://icons/loops.png" type="Texture" id=12]
-[ext_resource path="res://icons/3.png" type="Texture" id=13]
+[ext_resource path="res://icons/i11.png" type="Texture" id=10]
+[ext_resource path="res://UpButton.gd" type="Script" id=11]
+[ext_resource path="res://icons/i22.png" type="Texture" id=12]
+[ext_resource path="res://DownButton.gd" type="Script" id=13]
+[ext_resource path="res://icons/i33.png" type="Texture" id=14]
+[ext_resource path="res://LeftButton.gd" type="Script" id=15]
+[ext_resource path="res://icons/loops.png" type="Texture" id=16]
+[ext_resource path="res://icons/3.png" type="Texture" id=17]
 
 [node name="Game" type="Node"]
 
@@ -766,10 +770,10 @@ texture = ExtResource( 7 )
 stretch_mode = 5
 
 [node name="RightButton" type="Button" parent="."]
-margin_left = 324.457
-margin_top = 645.06
-margin_right = 796.457
-margin_bottom = 1019.06
+margin_left = 325.0
+margin_top = 678.0
+margin_right = 797.0
+margin_bottom = 1052.0
 rect_scale = Vector2( 0.117144, 0.145803 )
 icon = ExtResource( 8 )
 script = ExtResource( 9 )
@@ -777,14 +781,38 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="LeftButton" type="Button" parent="."]
-margin_left = 196.055
-margin_top = 643.429
-margin_right = 668.055
-margin_bottom = 1017.43
-rect_scale = Vector2( 0.118198, 0.149226 )
+[node name="UpButton" type="Button" parent="."]
+margin_left = 260.0
+margin_top = 644.0
+margin_right = 732.0
+margin_bottom = 1018.0
+rect_scale = Vector2( 0.117144, 0.145803 )
 icon = ExtResource( 10 )
 script = ExtResource( 11 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="DownButton" type="Button" parent="."]
+margin_left = 261.0
+margin_top = 708.0
+margin_right = 733.0
+margin_bottom = 1082.0
+rect_scale = Vector2( 0.117144, 0.145803 )
+icon = ExtResource( 12 )
+script = ExtResource( 13 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="LeftButton" type="Button" parent="."]
+margin_left = 197.0
+margin_top = 676.0
+margin_right = 669.0
+margin_bottom = 1050.0
+rect_scale = Vector2( 0.118198, 0.149226 )
+icon = ExtResource( 14 )
+script = ExtResource( 15 )
 
 [node name="Label" type="Label" parent="."]
 margin_left = 1112.19
@@ -796,13 +824,13 @@ text = "function() {
 
 }"
 
-[node name="Button" type="Button" parent="."]
+[node name="LoopButton" type="Button" parent="."]
 margin_left = 460.0
 margin_top = 651.0
 margin_right = 1051.0
 margin_bottom = 1211.0
 rect_scale = Vector2( 0.0673093, 0.0747432 )
-icon = ExtResource( 12 )
+icon = ExtResource( 16 )
 
 [node name="TextureRect" type="TextureRect" parent="."]
 margin_left = 476.0
@@ -810,6 +838,6 @@ margin_top = 664.0
 margin_right = 516.0
 margin_bottom = 704.0
 rect_scale = Vector2( 0.339606, 0.411174 )
-texture = ExtResource( 13 )
+texture = ExtResource( 17 )
 
 [editable path="Grid/Actor"]
