@@ -31,3 +31,12 @@ func update_pawn_position(pawn, cell_start, cell_target):
 	set_cellv(cell_target, pawn.type)
 	set_cellv(cell_start, EMPTY)
 	return map_to_world(cell_target) + cell_size / 2
+	
+func move_with_direction(input_direction):
+	var actor = get_node("/root/Game/Grid/Actor")
+	actor.update_look_direction(input_direction)
+	var target_position = self.request_move(actor, input_direction)
+	if target_position:
+		actor.move_to(target_position)
+	else:
+		actor.bump()	

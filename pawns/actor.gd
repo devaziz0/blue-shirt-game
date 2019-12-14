@@ -3,7 +3,7 @@ extends "pawn.gd"
 onready var Grid = get_parent()
 
 func _ready():
-	update_look_direction(Vector2(1, 0))
+	update_look_direction(Vector2(0, 0))
 
 func _process(delta):
 	var input_direction = get_input_direction()
